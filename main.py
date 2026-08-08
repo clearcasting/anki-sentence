@@ -3,6 +3,8 @@ import random
 from anki.collection import Collection
 from dotenv import load_dotenv
 from google import genai
+from rich.console import Console
+from rich.markdown import Markdown
 
 load_dotenv()
 
@@ -68,7 +70,9 @@ def practice_seen_word(col_path: str, deck: str):
         print(f"\n-- Fetching Gemini Feedback ---")
 
         feedback = evaluate_sentence(word, meaning, user_sentence)
-        print(feedback)
+        console = Console()
+        md = Markdown(feedback)
+        console.print(md)
 
     finally:
         col.close()

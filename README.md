@@ -3,35 +3,9 @@
 A Python CLI tool that pulls a random word you've previously reviewed from your local Anki collection and uses Google's Gemini API to evaluate a custom Japanese sentence you write for grammar, natural phrasing, and context.
 
 ## Example Output
-```
-Target Word: 話[はなし]
-Write a sentence: 彼の話は面白いね。
-Word Meaning: talk, story (This appears after sending sentence)
-
--- Fetching Gemini Feedback ---
-Here is the feedback on your sentence practice:
-
-1. **Grammar Check:** **100% Correct!** 
-2. **Naturalness:** **Very Natural!** The word 話[はなし] is used perfectly here.
-
-### **Translation & Meaning:**
-* "His stories are interesting, aren't they?" / "What he says is funny, isn't it?"
-
----
-
-### **Notes & Variations:**
-* **Casual Tone:** Your sentence is in casual/informal Japanese, which is great for talking with friends.
-* **Polite Version:** If you want to say this to a teacher or acquaintance, add **です**:
-  > 彼の話は面白**いですね**。  
-  > *(Kare no hanashi wa omoshiroi desu ne.)*
-
-* **Nuance Tip:** Keep in mind that 面白い (*omoshiroi*) can mean both "interesting" (fascinating) and "funny" (humorous) depending on the context.
-
-Great job! Keep up the good work.
-```
+![example output](example-output.png)
 
 ## Prerequisites
-
 - Python 3
 - Anki Desktop
 - A free Gemini API key from [Google AI Studio](https://aistudio.google.com/)
